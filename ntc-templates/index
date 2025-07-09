@@ -27,3 +27,11 @@ cisco_nxos_show_lldp_neighbors.template, .*, cisco_nxos, sh[[ow]] ll[[dp]] nei[[
 cisco_nxos_show_ip_pim_rp.template, .*, cisco_nxos, sh[[ow]] ip pi[[m]] rp
 cisco_nxos_show_ip_mroute.template, .*, cisco_nxos, sh[[ow]] ip mr[[oute]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] int[[erface]]
+
+junipernetworks_junos_show_igmp_snooping_membership.template, .*, junipernetworks_junos, sh[[ow]] ig[[mp]] s[[nooping]] membership
+## rp-hash equivalents could maybe be parsed from pim neighbors "Join Count: X" where X>0
+junipernetworks_junos_show_pim_neighbors_detail.template, .*, junipernetworks_junos, sh[[ow]] pi[[m]] nei[[ghbors]] detail
+junipernetworks_junos_show_lldp_neighbors.template, .*, junipernetworks_junos, sh[[ow]] ll[[dp]] nei[[ghbors]]
+junipernetworks_junos_show_pim_rps.template, .*, junipernetworks_junos, sh[[ow]] pi[[m]] rps
+junipernetworks_junos_show_multicast_route.template, .*, junipernetworks_junos, sh[[ow]] multic[[ast]] r[[oute]]
+junipernetworks_junos_show_interface.template, .*, junipernetworks_junos, sh[[ow]] int[[erface]]
