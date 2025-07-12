@@ -22,6 +22,10 @@ course.
 
 ## Quick start
 
+```
+sudo apt install build-essential python3.12-venv python3-dev libffi-dev python3-paramiko sshpass
+```
+
 * Clone this repository
 * Initialise the ntc-ansible submodule:
 
@@ -32,9 +36,10 @@ git submodule update --init --recursive
 * Create a python virtualenv and install the dependencies:
 
 ```bash
-virtualenv env
+python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
+ansible-galaxy collection install -r requirements.yml
 ```
 
 * Update the `hosts` inventory file with your own devices
@@ -50,7 +55,7 @@ touch secrets/vault.yml
 * Run the tool for your chosen multicast group with:
 
 ```bash
-ansible-playbook check_group.yml --extra-vars "mcast_group=224.0.0.123"
+ansible-playbook -i hosts check_group.yml --extra-vars "mcast_group=224.0.0.123"
 ```
 
 The rendered graph will be written to the `outputs` directory with the group

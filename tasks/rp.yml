@@ -4,7 +4,7 @@
 ---
 - name: "Fetch RP"
   ntc_show_command:
-    command: "show ip pim rp {{ mcast_group }}"
+    command: "{{ show_rps_cmd | default('show ip pim rp') }} {{ mcast_group }}"
     #connection: "offline"
     #file: "{{ playbook_dir }}/tests/{{ platforms[os] }}/{{platforms[os] }}_show_ip_pim_rp.raw"
     template_dir: "{{ inventory_dir }}/ntc-templates"

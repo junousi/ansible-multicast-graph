@@ -1,10 +1,15 @@
 [core]
-core1 os=nxos port=8182
-core2 os=eos
-core3 os=ios
+#192.168.123.101 os=junos ansible_host=192.168.123.101 ansible_user=admin
+#192.168.123.102 os=junos ansible_host=192.168.123.102 ansible_user=admin
+192.168.123.103 os=junos ansible_host=192.168.123.103 ansible_user=admin
 
 [all:vars]
-ansible_python_interpreter="/usr/bin/env python"
+ansible_python_interpreter="/usr/bin/env python3"
+show_lag_cmd="show lacp interfaces"
+show_rps_cmd="show pim rps"
+show_interface_cmd='show interfaces|no-more'
+show_mroute_cmd="show multicast route"
+show_snooping_cmd="show igmp snooping membership"
 
 # Used by built-in modules to reach devices via jump host
 # Uncomment if needed

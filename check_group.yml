@@ -1,7 +1,7 @@
 ---
 - name: Collate multicast details
-  hosts: all
-  connection: local
+  hosts: core
+  #connection: local
   gather_facts: false
   vars_files:
     - "{{vault_file|default('./secrets/vault.yml')}}"
@@ -19,7 +19,7 @@
     - name: Validate multicast group address
       fail:
         msg: "Valid multicast group must be passed to playbook with -e/--extra-vars, e.g. `-e mcast_group=224.0.0.1`"
-      when: not mcast_group|ipaddr or not mcast_group|ipaddr(mcast_net)
+      when: not mcast_group|ansible.utils.ipaddr or not mcast_group|ansible.utils.ipaddr(mcast_net)
 
     - name: Create output directories
       local_action: file path={{ results }} state=directory
@@ -31,7 +31,7 @@
       tags: ['setup']
 
     - name: "Include tasks"
-      include: "{{ lookup('first_found', task_list) }}"
+      include_tasks: "{{ lookup('first_found', task_list) }}"
       with_fileglob: [ "tasks/*.yml" ]
       loop_control:
         loop_var: task_path

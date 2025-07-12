@@ -4,7 +4,7 @@
 ---
 - name: "Fetch multicast routes"
   ntc_show_command:
-    command: "show ip mroute {{ mcast_group }}"
+    command: "{{ show_mroute_cmd | default('show ip mroute') }} {{ mcast_group }}"
     #connection: "offline"
     #file: "{{ playbook_dir }}/tests/{{ platforms[os] }}/{{platforms[os] }}_show_ip_mroute.raw"
     template_dir: "{{ inventory_dir }}/ntc-templates"

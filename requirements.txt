@@ -1,13 +1,13 @@
 ansible==2.3.2.0
 asn1crypto==0.23.0
 bcrypt==3.1.4
-cffi==1.11.2
+cffi
 cryptography==2.1.4
 enum34==1.1.6
 idna==2.6
 ipaddress==1.0.18
 Jinja2==2.10
-MarkupSafe==1.0
+MarkupSafe
 netaddr==0.7.19
 netmiko==1.4.3
 paramiko==2.4.0

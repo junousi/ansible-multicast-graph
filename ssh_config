@@ -5,5 +5,4 @@ Host bastionhost.local
   ControlPersist 5m
 
 Host *
-  ProxyCommand ssh -W %h:%p bastionhost.local
-
+#  ProxyCommand ssh -W %h:%p bastionhost.local

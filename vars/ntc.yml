@@ -3,4 +3,4 @@ platforms:
   ios: cisco_ios
   nxos: cisco_nxos
   eos: arista_eos
-  junos: junipernetworks_junos
+  junos: juniper_junos
