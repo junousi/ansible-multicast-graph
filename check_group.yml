@@ -1,7 +1,7 @@
 ---
 - name: Collate multicast details
-  hosts: core
-  #connection: local
+  hosts: all
+  connection: local
   gather_facts: false
   vars_files:
     - "{{vault_file|default('./secrets/vault.yml')}}"

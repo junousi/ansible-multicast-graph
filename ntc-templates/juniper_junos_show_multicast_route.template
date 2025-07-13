@@ -1,0 +1,19 @@
+#Group: 233.252.0.1
+#    Source: 10.255.70.15/32
+#    Upstream interface: so-1/0/0.0
+#    Downstream interface list:
+#        mt-1/1/0.1081344
+Value PUBLISHER (\*|\d+\.\d+\.\d+\.\d+\/\d+)
+Value GROUP (\d+\.\d+\.\d+\.\d+\/\d+)
+Value INCOMING_IFACE ([a-zA-Z0-9/-]+)
+Value List OUTGOING_IFACE (\S+)
+
+Start
+  ^Group: ${GROUP}
+  ^\s+Source: ${PUBLISHER}
+  ^\s+Upstream interface: ${INCOMING_IFACE}
+  ^\s+Downstream interface list:
+  ^\s+${OUTGOING_IFACE}
+  ^\s*$$ -> Record
+
+EOF

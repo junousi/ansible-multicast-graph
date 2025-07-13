@@ -1,0 +1,14 @@
+# Just some initial scaffolding to handle single group case, TODO
+Value VLAN (\d+)
+Value GROUP (\d+\.\d+\.\d+\.\d+)
+Value TYPE ([a-zA-Z]+)
+Value INTERFACE ([a-zA-Z0-9]+)
+
+Start
+  ^Learning-Domain: vlan-id ${VLAN} -> Entry
+
+Entry
+  ^Interface: ${INTERFACE} -> Continue
+  ^Up Groups:      1 -> Continue
+  ^\s+Group: ${GROUP} -> Continue
+  ^.*Type: ${TYPE} -> Record

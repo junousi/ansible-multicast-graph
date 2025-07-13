@@ -1,0 +1,6 @@
+Value Required GROUP_ADDRESS (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^RP selected: ${GROUP_ADDRESS} -> Record
+
+EOF

@@ -23,7 +23,7 @@ course.
 ## Quick start
 
 ```
-sudo apt install build-essential python3.12-venv python3-dev libffi-dev python3-paramiko sshpass
+sudo apt install build-essential python3.12-venv python3-dev libffi-dev python3-paramiko sshpass graphviz
 ```
 
 * Clone this repository
