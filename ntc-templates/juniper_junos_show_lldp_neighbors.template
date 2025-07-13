@@ -1,0 +1,10 @@
+Value NEIGHBOR (\S+)
+Value LOCAL_INTERFACE (\S+)
+
+Start
+  ^Local -> Entry
+
+Entry
+  ^${LOCAL_INTERFACE}\s+.*\s+${NEIGHBOR}\s+$$ -> Record
+
+EOF

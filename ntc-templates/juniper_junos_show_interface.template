@@ -1,9 +1,0 @@
-#Value Required INTERFACE (\S+)
-#Value LINK_STATUS (.+?)
-#Value ADMIN_STATE (.+?)
-#Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+)
-#
-#Start
-#  ^${INTERFACE}\s+${ADMIN_STATE}\s+${LINK_STATUS}\s+inet\s+${IP_ADDRESS} -> Record
-#
-#EOF
