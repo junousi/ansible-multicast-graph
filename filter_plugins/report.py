@@ -21,11 +21,13 @@ class FilterModule(object):
         :param iface: str|list Name(s) of the interface to normalise
         :return: str Normalised interface name
         """
-        pattern = r'^(Et|Gi|Lo|Po|po|Te|Vl)(?:[a-zA-Z-]*)(\d.*)$'
-        if type(iface) == list:
-            return [re.sub(pattern, r'\1\2', i, re.IGNORECASE).capitalize() for i in iface]
-        else:
-            return re.sub(pattern, r'\1\2', iface, re.IGNORECASE).capitalize()
+        return iface
+## Many Cisco assumptions here, commenting everything out for starters.
+#        pattern = r'^(Et|Gi|Lo|Po|po|Te|Vl|ge)(?:[a-zA-Z-]*)(\d.*)$'
+#        if type(iface) == list:
+#            return [re.sub(pattern, r'\1\2', i, re.IGNORECASE).capitalize() for i in iface]
+#        else:
+#            return re.sub(pattern, r'\1\2', iface, re.IGNORECASE).capitalize()
 
     def normalise_address(self, address):
         """ Normalise ip addresses to drop cidr prefix for /32

@@ -1,10 +1,12 @@
-Value NEIGHBOR (\S+)
 Value LOCAL_INTERFACE (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+Value NEIGHBOR (\S+)
 
 Start
-  ^Local -> Entry
-
-Entry
-  ^${LOCAL_INTERFACE}\s+.*\s+${NEIGHBOR}\s+$$ -> Record
+  ^Local\s+Information:\s+
+  ^Local\s+Interface\s+:\s+${LOCAL_INTERFACE}
+  ^Neighbor\s+Information:\s+
+  ^Port\s+description\s+:\s+${NEIGHBOR_INTERFACE}
+  ^System\s+name\s+:\s+${NEIGHBOR} -> Record
 
 EOF
