@@ -33,5 +33,4 @@ juniper_junos_show_pim_neighbors_detail.template, .*, juniper_junos, sh[[ow]] pi
 juniper_junos_show_lldp_neighbors.template, .*, juniper_junos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 juniper_junos_show_pim_rps.template, .*, juniper_junos, sh[[ow]] pi[[m]] rps
 juniper_junos_show_multicast_route.template, .*, juniper_junos, sh[[ow]] multic[[ast]] r[[oute]]
-## Interface is the only case we get from the currently checked out submodules
-#juniper_junos_show_interface.template, .*, juniper_junos, sh[[ow]] int[[erfaces]]
+juniper_junos_show_interfaces.template, .*, juniper_junos, sh[[ow]] int[[erfaces]]

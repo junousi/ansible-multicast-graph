@@ -5,7 +5,7 @@
 - name: "Fetch interfaces"
   ntc_show_command:
     command: "{{ show_interface_cmd | default('show interface') }}"
-    template_dir: "{{ inventory_dir }}/lib/ntc-ansible/ntc-templates/templates"
+    template_dir: "{{ inventory_dir }}/ntc-templates"
     platform: "{{ platforms[os] }}"
     host: "{{ inventory_hostname }}"
     username: "{{ ansible_ssh_user }}"

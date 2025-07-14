@@ -96,7 +96,7 @@ class FilterModule(object):
                 return value[0]['selected_rp']
 
             # Standard case, list of potential RPs
-            rps = sorted(value, key=lambda k: k['priority'])
+            rps = sorted(value, key=lambda k: k['rp'])
             if 'rp' in rps[0]:
                 return rps[0]['rp']
             else:

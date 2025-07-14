@@ -4,8 +4,8 @@
 #    Downstream interface list:
 #        mt-1/1/0.1081344
 Value PUBLISHER (\*|\d+\.\d+\.\d+\.\d+\/\d+)
-Value GROUP (\d+\.\d+\.\d+\.\d+\/\d+)
-Value INCOMING_IFACE ([a-zA-Z0-9/-]+)
+Value GROUP (\d+\.\d+\.\d+\.\d+)
+Value INCOMING_IFACE (\S+)
 Value List OUTGOING_IFACE (\S+)
 
 Start
@@ -13,7 +13,6 @@ Start
   ^\s+Source: ${PUBLISHER}
   ^\s+Upstream interface: ${INCOMING_IFACE}
   ^\s+Downstream interface list:
-  ^\s+${OUTGOING_IFACE}
-  ^\s*$$ -> Record
+  ^\s+${OUTGOING_IFACE} -> Record
 
 EOF
