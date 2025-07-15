@@ -43,6 +43,9 @@
       run_once: true
       tags: ['compile']
 
+    - name: Amend unit 0 to lldp discovery interfaces
+      shell: "sed -i -r 's#(_interface: ge-[0-9]+\\/[0-9]+\\/[0-9]+)$#\\1.0#' {{results}}/{{mcast_group}}.yaml"
+
     - name: "Generate Graph"
       template:
         src: "templates/graph.j2"
