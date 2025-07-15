@@ -23,7 +23,7 @@ class FilterModule(object):
         """
         return iface
 ## Many Cisco assumptions here, commenting everything out for starters.
-#        pattern = r'^(Et|Gi|Lo|Po|po|Te|Vl|ge)(?:[a-zA-Z-]*)(\d.*)$'
+#        pattern = r'^(Et|Gi|Lo|Po|po|Te|Vl|ge|lo)(?:[a-zA-Z-]*)(\d.*)$'
 #        if type(iface) == list:
 #            return [re.sub(pattern, r'\1\2', i, re.IGNORECASE).capitalize() for i in iface]
 #        else:

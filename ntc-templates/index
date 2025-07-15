@@ -28,8 +28,8 @@ cisco_nxos_show_ip_pim_rp.template, .*, cisco_nxos, sh[[ow]] ip pi[[m]] rp
 cisco_nxos_show_ip_mroute.template, .*, cisco_nxos, sh[[ow]] ip mr[[oute]]
 cisco_nxos_show_interface.template, .*, cisco_nxos, sh[[ow]] int[[erface]]
 
-juniper_junos_show_igmp_snooping_membership.template, .*, juniper_junos, sh[[ow]] ig[[mp]] s[[nooping]] membership
 juniper_junos_show_pim_neighbors_detail.template, .*, juniper_junos, sh[[ow]] pi[[m]] nei[[ghbors]] detail
+juniper_junos_show_igmp_snooping_membership.template, .*, juniper_junos, sh[[ow]] ig[[mp]] g[[roups]]
 juniper_junos_show_lldp_neighbors.template, .*, juniper_junos, sh[[ow]] ll[[dp]] nei[[ghbors]]
 juniper_junos_show_pim_rps.template, .*, juniper_junos, sh[[ow]] pi[[m]] rps
 juniper_junos_show_multicast_route.template, .*, juniper_junos, sh[[ow]] multic[[ast]] r[[oute]]

@@ -10,7 +10,7 @@ show_lag_cmd="show lacp interfaces"
 show_rps_cmd="show pim rps"
 show_interface_cmd='show interfaces terse|match "inet "'
 show_mroute_cmd="show multicast route group"
-show_snooping_cmd="show igmp snooping membership"
+show_snooping_cmd="show igmp group"
 show_lldp_cmd="show lldp neighbors detail|no-more"
 
 # Used by built-in modules to reach devices via jump host
