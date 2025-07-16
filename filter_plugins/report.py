@@ -347,7 +347,7 @@ class FilterModule(object):
         if port in report[host]['interface_map']:
             pass
 
-        return "{}_{}".format(host, re.sub(r'[^a-zA-Z0-9-]', r'_', normalised_port))
+        return "{}_{}".format(host, re.sub(r'[^a-zA-Z0-9]', r'_', normalised_port))
 
     def get_publishers(self, mroutes, interfaces):
         """ Returns a list of Publisher nodes attached to this switch by
