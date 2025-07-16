@@ -1,8 +1,7 @@
 [core]
-# Inject to /etc/hosts
-rtr1 os=junos ansible_host=192.168.122.101 ansible_user=admin
-rtr2 os=junos ansible_host=192.168.122.102 ansible_user=admin
-rtr3 os=junos ansible_host=192.168.122.103 ansible_user=admin
+rtr1 os=junos ansible_user=admin
+rtr2 os=junos ansible_user=admin
+rtr3 os=junos ansible_user=admin
 
 [all:vars]
 ansible_python_interpreter="/usr/bin/env python3"
